@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Img1",
+        "description": "Show Name - Video Type # - This is the title of the video",
+        "desktopImg": "img/img1_1920.jpg",
+        "tabletImg": "img/img1_1024.jpg"
+    },
+    {
+        "title": "Lorem Ipsum sit dolor amet, cons",
+        "description": "Show Name - Video Type # - This is the title of the video",
+        "desktopImg": "img/img2_1920.jpg",
+        "tabletImg": "img/img2_1024.jpg"
+    },
+    {
+        "title": "img 3",
+        "description": "Show Name - Video Type # - This is the title of the video",
+        "desktopImg": "img/img3_1920.jpg",
+        "tabletImg": "img/img3_1024.jpg"
+    },
+    {
+        "title": "Lorem Ipsum sit dolor amet, cons",
+        "description": "Show Name - Video Type # - This is the title of the video",
+        "desktopImg": "img/img4_1920.jpg",
+        "tabletImg": "img/img4_1024.jpg"
+    },
+    {
+        "title": "Lorem Ipsum sit dolor amet, cons",
+        "description": "Show Name - Video Type # - This is the title of the video",
+        "desktopImg": "img/img5_1920.jpg",
+        "tabletImg": "img/img5_1024.jpg"
+    }
+
+]
