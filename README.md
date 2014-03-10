@@ -7,15 +7,18 @@ This fullscreen slider will allow you to include a full gallery with responsive 
 Also there are some options for enabling AutoPlay (With / Without TimeBar), Pause on Hover, etc.
 
 <h1>How to Use</h1>
-<pre>
 
-</pre>
+
+
 Add the CSS and JS files into your project
+<pre>
 <link rel="stylesheet" href="css/dechadou.slider.css">
 <script src="js/dechadou.slider.js"></script>
-
+</pre>
 Add on your HTML
+<pre>
 <section id="slider"></section>
+</pre>
 
 Add on your page
 <script>
@@ -26,11 +29,12 @@ $(document).ready(function (e) {
 </pre>
 
 
-Modify your images.json file to load your images and captions
+<strong>Modify your images.json file to load your images and captions</strong>
 
 -----------------------------------------------------------
 
 <h1>Options:</h1>
+<pre>
 $('#slider').dechadouSlider({
         container: '.slider',       // Set the main class of the slides container (Default: '.slider')
         jsonFile: 'images.json',    // Set the location of the json file (Default: 'images.json')
@@ -44,3 +48,4 @@ $('#slider').dechadouSlider({
         esponsive: true,            // If True, it will use the Tablet Image when the screen is below 1024px (Default: 'true')
         captions: true              // Enable or disable captions (Default: 'true')
 });
+</pre>
