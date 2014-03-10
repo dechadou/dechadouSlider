@@ -12,20 +12,26 @@ Also there are some options for enabling AutoPlay (With / Without TimeBar), Paus
 
 Add the CSS and JS files into your project
 <pre>
+```
 <link rel="stylesheet" href="css/dechadou.slider.css">
 <script src="js/dechadou.slider.js"></script>
+```
 </pre>
 Add on your HTML
 <pre>
+```
 <section id="slider"></section>
+```
 </pre>
 
 Add on your page
+```
 <script>
 $(document).ready(function (e) {
     $('#slider').dechadouSlider();
 })
 </script>
+```
 </pre>
 
 
