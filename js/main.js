@@ -9,6 +9,7 @@ $(document).ready(function (e) {
         stopOnHover: true,          // AutoPlay stop on hover
         delay: 5000,                // Delay for AutoPlay in miliseconds
         time: 500,                  // Speed of the transition
-        responsive: true            // If True, it will use the Tablet Image when the screen is below 1024px
+        esponsive: true,            // If True, it will use the Tablet Image when the screen is below 1024px
+        captions: true              // Enable or disable captions
     });
 });

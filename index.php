@@ -20,10 +20,7 @@
     <a href="#" class="brochure-digital">FORK ON GITHUB</a>
 </header>
 
-<section id="slider">
-    <div class="controls"></div>
-    <div class="slider"></div>
-</section>
+<section id="slider"></section>
 
 
 <footer>
