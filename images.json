@@ -13,7 +13,7 @@
     },
     {
         "title": "img 3",
-        "description": "<a href='http://www.google.com'>Google!</a>",
+        "description": "I also support html! click here > <a href='http://www.google.com'>Google!</a>",
         "desktopImg": "img/img3_1920.jpg",
         "tabletImg": "img/img3_1024.jpg"
     },
