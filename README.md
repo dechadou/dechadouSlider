@@ -6,9 +6,10 @@ FullScreen slider with responsive images fallback
 This fullscreen slider will allow you to include a full gallery with responsive fallback, navigation controls and captions.
 Also there are some options for enabling AutoPlay (With / Without TimeBar), Pause on Hover, etc.
 
+<h1>Demo</h1>
+http://dechadou.github.io/dechadouSlider/demo.html
+
 <h1>How to Use</h1>
-
-
 
 Add the CSS and JS files into your project
 ```sh
@@ -52,3 +53,4 @@ $('#slider').dechadouSlider({
         captions: true              // Enable or disable captions (Default: 'true')
 });
 </pre>
+
