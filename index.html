@@ -47,9 +47,63 @@
 
       <section id="main_content">
         <h1>
-<a name="dechadouslider" class="anchor" href="#dechadouslider"><span class="octicon octicon-link"></span></a>dechadouSlider</h1>
+<a name="dechadou-slider" class="anchor" href="#dechadou-slider"><span class="octicon octicon-link"></span></a>DeChadou Slider</h1>
 
 <p>FullScreen slider with responsive images fallback</p>
+
+<p>This fullscreen slider will allow you to include a full gallery with responsive fallback, navigation controls and captions.
+Also there are some options for enabling AutoPlay (With / Without TimeBar), Pause on Hover, etc.</p>
+
+<h1>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h1>
+
+<p><a href="http://dechadou.github.io/dechadouSlider/demo.html">http://dechadou.github.io/dechadouSlider/demo.html</a></p>
+
+<h1>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to Use</h1>
+
+<p>Add the CSS and JS files into your project</p>
+
+<div class="highlight highlight-sh"><pre>&lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="nv">href</span><span class="o">=</span><span class="s2">"css/dechadou.slider.css"</span>&gt;
+&lt;script <span class="nv">src</span><span class="o">=</span><span class="s2">"js/dechadou.slider.js"</span>&gt;&lt;/script&gt;
+</pre></div>
+
+<p>Add on your HTML</p>
+
+<div class="highlight highlight-sh"><pre>&lt;section <span class="nv">id</span><span class="o">=</span><span class="s2">"slider"</span>&gt;&lt;/section&gt;
+</pre></div>
+
+<p>Add on your page</p>
+
+<pre><code>&lt;script&gt;
+$(document).ready(function (e) {
+    $('#slider').dechadouSlider();
+})
+&lt;/script&gt;
+</code></pre>
+
+<p></p>
+
+<p><strong>Modify your images.json file to load your images and captions</strong></p>
+
+<hr><h1>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options:</h1>
+
+<pre>
+$('#slider').dechadouSlider({
+        container: '.slider',       // Set the main class of the slides container (Default: '.slider')
+        jsonFile: 'images.json',    // Set the location of the json file (Default: 'images.json')
+        navClass: '.controls',      // Set the main class of the controls container (Default: '.controls')
+        timerBarClass: 'timer-bar', // Set the main class of the timer-bar if enabled (Default: 'timer-bar')
+        enableTimerBar: true,       // enable timebar, only visible if autoplay = true (Default: 'true')
+        autoplay : true,            // AutoPlay (Default: 'true')
+        stopOnHover: true,          // AutoPlay stop on hover (Default: 'true')
+        delay: 5000,                // Delay for AutoPlay in miliseconds (Default: '5000')
+        time: 500,                  // Speed of the transition (Default: '500')
+        esponsive: true,            // If True, it will use the Tablet Image when the screen is below 1024px (Default: 'true')
+        captions: true              // Enable or disable captions (Default: 'true')
+});
+</pre>
       </section>
 
       <footer>
