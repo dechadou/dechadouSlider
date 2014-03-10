@@ -14,7 +14,7 @@ http://dechadou.github.io/dechadouSlider/demo.html
 Add the CSS and JS files into your project
 ```sh
 <link rel="stylesheet" href="css/dechadou.slider.css">
-<script src="js/dechadou.slider.js"></script>
+<script src="js/dechadou.slider.min.js"></script>
 ```
 
 Add on your HTML
