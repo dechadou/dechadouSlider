@@ -3,7 +3,7 @@
  mail: dechadou@gmail.com
  website: http://estudiopasto.com
  linkedin: http://ar.linkedin.com/in/dechadou/
- Version: 1.0 Beta
+ Version: 1.1
  */
 (function($) {
     var defaults = {
@@ -17,7 +17,8 @@
         stopOnHover: true,
         enableTimerBar: true,
         time: 500,
-        captions: false
+        captions: false,
+        enableKeyboard: true
     };
     var methods = {
         init : function(options) {
@@ -34,9 +35,9 @@
             methods.createTimerBar();
             methods.makeResponsive(items);
             methods.startSlider(items,defaults.autoplay);
+            methods.useKeyboard();
             (defaults.captions) ? methods.showFigcaption() : methods.hideFigcaption();
             methods.fullScreen();
-
         },
         fullScreen: function(){
             var browserHeight = $(window).height();
@@ -129,22 +130,28 @@
             $(defaults.mainSelector+' '+defaults.container).width(methods.calculateWidths(items));
             $(defaults.mainSelector+' '+defaults.container).addClass('clearfix');
         },
+        useKeyboard: function(){
+            if (defaults.enableKeyboard){
+                $('html').keydown(function(e){
+                    var next = $(defaults.mainSelector+' '+defaults.navClass+' a.current').next();
+                    var prev = $(defaults.mainSelector+' '+defaults.navClass+' a.current').prev();
+                    switch(e.which){
+                        case 39:
+                            methods.moveElement(next);
+                            break;
+                        case 37:
+                            methods.moveElement(prev);
+                            break;
+                    }
+                })
+            }
+        },
         startSlider: function(items,autoplay){
             methods.setContainer(items);
 
             $(defaults.mainSelector+' '+defaults.navClass+' a').click(function(e){
                 e.preventDefault();
-
-                var imgWidth = $(document).width();
-                var item = $(this);
-                var moveToLeft = -((imgWidth*item.text())-imgWidth)+'px' ;
-
-                $(defaults.mainSelector+' '+defaults.navClass+' a').removeClass('current');
-                item.addClass('current');
-
-                $(defaults.mainSelector+' '+defaults.container).animate({
-                    left: moveToLeft
-                },defaults.time)
+                methods.moveElement($(this));
             })
 
             if (autoplay){
@@ -160,6 +167,17 @@
                     });
                 }
             }
+        },
+        moveElement: function(item){
+            var imgWidth = $(document).width();
+            var moveToLeft = -((imgWidth*item.text())-imgWidth)+'px' ;
+
+            $(defaults.mainSelector+' '+defaults.navClass+' a').removeClass('current');
+            item.addClass('current');
+
+            $(defaults.mainSelector+' '+defaults.container).animate({
+                left: moveToLeft
+            },defaults.time)
         },
         createAutoPlay: function(items){
 
